@@ -531,3 +531,6 @@ form table.contact-form input#send:hover {
 
 .radio-input {
   vertical-align: middle; }
+
+pre {
+  font-size: 0.85em; }
