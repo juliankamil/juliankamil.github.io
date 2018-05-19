@@ -33,15 +33,11 @@
 		<h2>etechcetera</h2>
 		
 
-		<br/>
-		
 		
 		<img src="/assets/img/Avatar%20-%20Rounded%20-%20BW%20-%20790.jpg" alt="Logo" height="160" width="160" />
 		
 
-		<br/><br/>
-
-		<p>News and opinions on science, technology, and pop culture</p>
+		<div class="site-tag-line">News and opinions on science, technology, and pop culture</div>
 
 		<p class="view">
 		    <a href="/">Home</a><br/>
@@ -77,6 +73,12 @@ advanced cognitive and digital capabilities
 <span class="paragraph-title">Executive Consultant,</span> IBM Corporate Citizenship<br />
 <span class="paragraph-title">Chief Technology Officer,</span> Psynapse Technologies and Innosphere</p>
 
+<h3 id="inventions">Inventions</h3>
+
+<p><a href="https://patents.google.com/patent/US6038548?oq=6038548+kamil">US Patent 6038548</a><br />
+<a href="https://patents.google.com/patent/US20100274681A1/en?oq=20100274681+kamil">US Patent 20100274681</a><br />
+<a href="https://patents.google.com/patent/US20100281137A1/en?oq=20100281137+kamil">US Patent 20100281137</a></p>
+
 <h3 id="contact-me">Contact me</h3>
 
 <p>Send me a direct message on Twitter: <a href="https://twitter.com/messages/compose?recipient_id=&amp;ref_src=twsrc%5Etfw" class="twitter-dm-button" data-screen-name="juliankamil" data-show-count="false">@juliankamil</a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
@@ -86,21 +88,36 @@ advanced cognitive and digital capabilities
 <form method="POST" action="https://formspree.io/julian.kamil@gmail.com">
 <table class="contact-form">
     <tr valign="baseline">
-	<td class="label"><label for="name">Name:</label></td>
-	<td class="field"><input type="text" name="name" id="name" /></td>
+        <td class="label"><label for="name">Name:</label></td>
+        <td class="field"><input type="text" name="name" id="name" /></td>
     </tr>
     <tr valign="baseline">
-	<td class="label"><label for="email">Email:</label></td>
-	<td class="field"><input type="text" name="email" id="email" /></td>
+        <td class="label"><label for="email">Email:</label></td>
+        <td class="field"><input type="text" name="email" id="email" /></td>
+    </tr>
+    <tr valign="baseline">
+        <td class="label"><label for="phone">Phone:</label></td>
+        <td class="field"><input type="text" name="phone" id="phone" /></td>
+    </tr>
+    <tr valign="baseline">
+        <td class="label"><label for="phone">Preference:</label></td>
+        <td class="field">
+            <input type="radio" name="preference" id="preference-option-1" value="email" class="radio-input" checked="checked" />
+            <label for="preference-option-1" class="radio-label">Email</label>
+            <input type="radio" name="preference" id="preference-option-2" value="phone" class="radio-input" />
+            <label for="preference-option-2" class="radio-label">Phone</label>
+        </td>
     </tr>
     <tr valign="top">
-	<td class="label"><label for="message">Message:</label></td>
-	<td class="field"><textarea name="message" id="message" rows="7"></textarea></td>
+        <td class="label"><label for="message">Message:</label></td>
+        <td class="field"><textarea name="message" id="message" rows="7"></textarea></td>
     </tr>
     <tr valign="baseline">
-	<td>&nbsp;</td>
-	<td><input type="submit" id="send" value="Send" /></td>
+        <td>&nbsp;</td>
+        <td><input type="submit" id="send" value="Send" /></td>
     </tr>
+    <input type="hidden" name="_subject" value="New contact request from juliankamil.github.io" />
+    <input type="hidden" name="_format" value="plain" />
 </table>
 </form>
 

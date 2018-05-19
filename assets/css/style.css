@@ -459,6 +459,11 @@ a.site-title:hover {
   font-weight: bold;
   text-decoration: none; }
 
+div.site-tag-line {
+  color: #555;
+  font-size: 0.95em;
+  padding: 12px 0px; }
+
 p span.date-line {
   color: #444;
   font-size: 0.9em; }
@@ -478,7 +483,8 @@ p span.paragraph-title {
 .text-bubble {
   background-color: #f4f8fb;
   border-radius: 20px;
-  padding: 10px 10px 10px 18px; }
+  padding: 10px 10px 10px 18px;
+  font-size: 0.95em; }
 
 form table.contact-form {
   width: 480px;
@@ -519,3 +525,6 @@ form table.contact-form input#send {
 
 form table.contact-form input#send:hover {
   background-color: #eee; }
+
+.radio-input {
+  vertical-align: middle; }
