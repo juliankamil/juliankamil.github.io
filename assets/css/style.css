@@ -480,6 +480,9 @@ p span.paragraph-title {
   font-weight: bold;
   color: #777; }
 
+span.line-title {
+  color: #000; }
+
 .text-bubble {
   background-color: #f4f8fb;
   border-radius: 20px;
