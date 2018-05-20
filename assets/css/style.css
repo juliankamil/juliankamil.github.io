@@ -516,7 +516,7 @@ form table.contact-form input#email {
   width: 260px; }
 
 form table.contact-form textarea#message {
-  width: 320px;
+  width: 300px;
   border: 1px solid #ccc;
   padding: 2px 4px;
   font-size: 0.9em; }
@@ -559,7 +559,7 @@ pre {
   background-color: #eee; }
 
 #comment-form textarea#comment-form-message {
-  width: 320px;
+  width: 300px;
   border: 1px solid #ccc;
   padding: 2px 4px;
   font-size: 0.9em; }
