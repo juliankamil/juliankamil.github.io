@@ -518,23 +518,24 @@ form table.contact-form input#name {
 form table.contact-form input#email {
   width: 260px; }
 
+form table.contact-form textarea#message {
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 2px 4px;
+  font-size: 0.9em; }
+
 /*
 form table.contact-form textarea#message {
-    width:300px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    width:100%;
     border:1px solid #ccc;
     padding:2px 4px;
     font-size:0.9em;
 }
 */
-form table.contact-form textarea#message {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  border: 1px solid #ccc;
-  padding: 2px 4px;
-  font-size: 0.9em; }
-
 form table.contact-form input#send {
   height: 32px;
   padding: 2px 12px;
