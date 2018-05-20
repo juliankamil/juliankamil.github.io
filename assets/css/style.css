@@ -513,10 +513,10 @@ form table.contact-form input {
   padding: 2px 4px; }
 
 form table.contact-form input#name {
-  width: 260px; }
+  width: 180px; }
 
 form table.contact-form input#email {
-  width: 260px; }
+  width: 180px; }
 
 form table.contact-form textarea#message {
   width: 200px;
