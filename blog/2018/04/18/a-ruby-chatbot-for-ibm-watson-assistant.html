@@ -81,9 +81,9 @@ puts chatbot.message(request.to_json)
 <p>You can get <a href="https://github.com/juliankamil/watson-assistant-chatbot">the Ruby source code</a> of the gem from Github.</p>
 
 
-<!--
 <h3>Comments</h3>
 
+<!--
 <form method="POST" action="https://api.staticman.net/v2/entry/juliankamil/juliankamil.github.io/master/comments" id="comment-form">
     <fieldset>
 	<label for="comment-form-message">Comment:</label>
@@ -111,6 +111,47 @@ puts chatbot.message(request.to_json)
     </fieldset>
 </form>
 -->
+
+<div class="form-container">
+    <form id="comment-form" method="POST" action="https://api.staticman.net/v2/entry/juliankamil/juliankamil.github.io/master/comments">
+	<div class="row">
+	    <div class="left-column">
+		<label for="comment-form-message">Comment:</label>
+	    </div>
+	    <div class="right-column">
+		<textarea name="fields[message]" type="text" rows="7" id="comment-form-message"></textarea>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <div class="left-column">
+		<label for="comment-form-name">Name:</label>
+	    </div>
+	    <div class="right-column">
+		<input name="fields[name]" type="text" id="comment-form-name"/>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <div class="left-column">
+		<label for="comment-form-email">Email:</label>
+	    </div>
+	    <div class="right-column">
+		<input name="fields[email]" type="email" id="comment-form-email"/>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <input type="hidden" name="options[redirect]"   value="https://juliankamil.github.io/blog/2018/04/18/a-ruby-chatbot-for-ibm-watson-assistant.html"/>
+	    <input type="hidden" name="options[slug]"       value="a-ruby-chatbot-for-ibm-watson-assistant"/>
+	    <input type="hidden" name="fields[replying_to]" value="" id="comment-parent"/>
+	</div>
+	
+	<div class="row">
+            <input type="submit" id="comment-form-submit" value="Comment" /></td>
+	</div>
+    </form>
+</div>
 
 
 	    </section>

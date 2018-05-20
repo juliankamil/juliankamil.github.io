@@ -80,9 +80,9 @@ The new and improved <a href="https://cloud.google.com/speech-to-text/">Cloud Sp
 
 
 
-<!--
 <h3>Comments</h3>
 
+<!--
 <form method="POST" action="https://api.staticman.net/v2/entry/juliankamil/juliankamil.github.io/master/comments" id="comment-form">
     <fieldset>
 	<label for="comment-form-message">Comment:</label>
@@ -110,6 +110,47 @@ The new and improved <a href="https://cloud.google.com/speech-to-text/">Cloud Sp
     </fieldset>
 </form>
 -->
+
+<div class="form-container">
+    <form id="comment-form" method="POST" action="https://api.staticman.net/v2/entry/juliankamil/juliankamil.github.io/master/comments">
+	<div class="row">
+	    <div class="left-column">
+		<label for="comment-form-message">Comment:</label>
+	    </div>
+	    <div class="right-column">
+		<textarea name="fields[message]" type="text" rows="7" id="comment-form-message"></textarea>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <div class="left-column">
+		<label for="comment-form-name">Name:</label>
+	    </div>
+	    <div class="right-column">
+		<input name="fields[name]" type="text" id="comment-form-name"/>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <div class="left-column">
+		<label for="comment-form-email">Email:</label>
+	    </div>
+	    <div class="right-column">
+		<input name="fields[email]" type="email" id="comment-form-email"/>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <input type="hidden" name="options[redirect]"   value="https://juliankamil.github.io/twistech/2018/04/09/this-week-in-science-and-technology.html"/>
+	    <input type="hidden" name="options[slug]"       value="this-week-in-science-and-technology"/>
+	    <input type="hidden" name="fields[replying_to]" value="" id="comment-parent"/>
+	</div>
+	
+	<div class="row">
+            <input type="submit" id="comment-form-submit" value="Comment" /></td>
+	</div>
+    </form>
+</div>
 
 
 	    </section>
