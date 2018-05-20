@@ -23,6 +23,7 @@
 <!-- End Jekyll SEO tag -->
 
 	<link rel="stylesheet" href="/assets/css/style.css?v=">
+	<link rel="author" href="https://plus.google.com/+JulianKamil/">
     </head>
     <body>
 	<div class="wrapper">
@@ -143,11 +144,40 @@ advanced cognitive and digital capabilities
 </form>
 
 
+<h3>Comments</h3>
+
+<form method="POST" action="https://api.staticman.net/v2/entry/juliankamil/juliankamil.github.io/master/comments" id="comment-form">
+    <fieldset>
+	<label for="comment-form-message">Comment:</label>
+	<textarea name="fields[message]" type="text" rows="7" id="comment-form-message"></textarea>
+    </fieldset>
+
+    <fieldset>
+	<label for="comment-form-name">Name:</label>
+	<input name="fields[name]" type="text" id="comment-form-name"/>
+    </fieldset>
+    
+    <fieldset>
+	<label for="comment-form-email">Email:</label>
+	<input name="fields[email]" type="email" id="comment-form-email"/>
+    </fieldset>
+    
+    <fieldset class="hidden" style="display:none;">
+	<input type="hidden" name="options[redirect]"   value="http://0.0.0.0:4000/about/me"/>
+	<input type="hidden" name="options[slug]"       value=""/>
+	<input type="hidden" name="fields[replying_to]" value="" id="comment-parent"/>
+    </fieldset>
+
+    <fieldset>
+        <input type="submit" id="comment-form-submit" value="Comment" /></td>
+    </fieldset>
+</form>
+
 
 	    </section>
 	    <footer>
 		<p>
-		    <small>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></small><br/>
+		    <small>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://staticman.net/">Staticman</a></small><br/>
 		    <small>Hosted on <a href="https://pages.github.com/">GitHub Pages</a></small><br/>
 		</p>
 	    </footer>

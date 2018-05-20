@@ -534,3 +534,44 @@ form table.contact-form input#send:hover {
 
 pre {
   font-size: 0.85em; }
+
+#comment-form {
+  width: 480px; }
+
+#comment-form fieldset {
+  border: 0px solid #ccc;
+  font-size: 0.9em;
+  padding: 4px; }
+
+#comment-form fieldset label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+  vertical-align: top; }
+
+#comment-form input#comment-form-submit {
+  height: 32px;
+  padding: 2px 12px;
+  border-radius: 5px;
+  margin-left: 84px; }
+
+#comment-form input#comment-form-submit:hover {
+  background-color: #eee; }
+
+#comment-form textarea#comment-form-message {
+  width: 320px;
+  border: 1px solid #ccc;
+  padding: 2px 4px;
+  font-size: 0.9em; }
+
+#comment-form input#comment-form-name {
+  width: 260px; }
+
+#comment-form input#comment-form-email {
+  width: 260px; }
+
+#comment-form input {
+  border: 1px solid #ccc;
+  height: 1.5em;
+  font-size: 0.9em;
+  padding: 2px 4px; }
