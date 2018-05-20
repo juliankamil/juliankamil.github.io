@@ -447,6 +447,9 @@ footer {
     padding: 0.4in;
     font-size: 12pt;
     color: #444; } }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select, textarea, input {
+    font-size: 16px; } }
 body {
   font-family: "Helvetica Neue","sans-serif";
   font-size: 0.95em; }
