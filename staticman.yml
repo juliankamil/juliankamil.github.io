@@ -1,5 +1,5 @@
 comments:
-  allowedFields: ["name", "email", "message"]
+  allowedFields: ["name", "email", "content"]
   branch: "master"
   commitMessage: "Added Staticman comment data"
   filename: "comment-{@timestamp}"
@@ -7,7 +7,7 @@ comments:
   moderation: true
   name: "Julian I. Kamil / etechcetera"
   path: "_data/comments/{options.slug}"
-  requiredFields: ["name", "email", "message"]
+  requiredFields: ["name", "email", "content"]
   transforms:
     email: md5
   generatedFields:
