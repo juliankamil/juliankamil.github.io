@@ -100,56 +100,16 @@ advanced cognitive and digital capabilities
 
 <p>Send me a direct message on Twitter: <a href="https://twitter.com/messages/compose?recipient_id=&amp;ref_src=twsrc%5Etfw" class="twitter-dm-button" data-screen-name="juliankamil" data-show-count="false">@juliankamil</a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 
-<!--
-Fill this form and let me know of your interest and contact info:
-
-<form method="POST" action="https://formspree.io/julian.kamil@gmail.com">
-<table class="contact-form">
-    <tr valign="baseline">
-        <td class="label"><label for="name">Name:</label></td>
-        <td class="field"><input type="text" name="name" id="name" /></td>
-    </tr>
-    <tr valign="baseline">
-        <td class="label"><label for="email">Email:</label></td>
-        <td class="field"><input type="text" name="email" id="email" /></td>
-    </tr>
-    <tr valign="baseline">
-        <td class="label"><label for="phone">Phone:</label></td>
-        <td class="field"><input type="text" name="phone" id="phone" /></td>
-    </tr>
-    <tr valign="baseline">
-        <td class="label"><label for="phone">Preference:</label></td>
-        <td class="field">
-            <input type="radio" name="preference" id="preference-option-1" value="email" class="radio-input" checked="checked" />
-            <label for="preference-option-1" class="radio-label">Email</label>
-            <input type="radio" name="preference" id="preference-option-2" value="phone" class="radio-input" />
-            <label for="preference-option-2" class="radio-label">Phone</label>
-        </td>
-    </tr>
-    <tr valign="top">
-        <td class="label"><label for="message">Message:</label></td>
-        <td class="field"><textarea name="message" id="message" rows="7"></textarea></td>
-    </tr>
-    <tr valign="baseline">
-        <td>&nbsp;</td>
-        <td><input type="submit" id="send" value="Send" /></td>
-    </tr>
-    <input type="hidden" name="_subject" value="New contact request from juliankamil.github.io" />
-    <input type="hidden" name="_format" value="plain" />
-</table>
-</form>
--->
-
 <p>Fill this form and let me know of your interest and contact info:</p>
 
 <div class="form-container">
-    <form id="contact-form" method="POST" action="https://api.staticman.net/v2/entry/juliankamil/juliankamil.github.io/master/comments">
+    <form id="contact-form" method="POST" action="https://formspree.io/julian.kamil@gmail.com">
 	<div class="row">
 	    <div class="left-column">
 		<label for="contact-form-name">Name:</label>
 	    </div>
 	    <div class="right-column">
-		<input name="fields[name]" type="text" id="contact-form-name" />
+		<input name="name" type="text" id="contact-form-name" />
 	    </div>
 	</div>
 
@@ -158,7 +118,7 @@ Fill this form and let me know of your interest and contact info:
 		<label for="contact-form-email">Email:</label>
 	    </div>
 	    <div class="right-column">
-		<input name="fields[email]" type="email" id="contact-form-email" />
+		<input name="email" type="email" id="contact-form-email" />
 	    </div>
 	</div>
 
@@ -167,7 +127,7 @@ Fill this form and let me know of your interest and contact info:
 		<label for="contact-form-phone">Phone:</label>
 	    </div>
 	    <div class="right-column">
-		<input name="fields[phone]" type="phone" id="contact-form-phone" />
+		<input name="phone" type="phone" id="contact-form-phone" />
 	    </div>
 	</div>
 
@@ -176,9 +136,9 @@ Fill this form and let me know of your interest and contact info:
 		<label for="contact-form-preference">Preference:</label>
 	    </div>
 	    <div class="right-column">
-		<input type="radio" name="fields[preference]" id="preference-option-1" value="email" class="radio-input" checked="checked" />
+		<input type="radio" name="preference" id="preference-option-1" value="email" class="radio-input" checked="checked" />
 		<label for="preference-option-1" class="radio-label">Email</label>
-		<input type="radio" name="fields[preference]" id="preference-option-2" value="phone" class="radio-input" />
+		<input type="radio" name="preference" id="preference-option-2" value="phone" class="radio-input" />
 		<label for="preference-option-2" class="radio-label">Phone</label>
 	    </div>
 	</div>
@@ -188,18 +148,17 @@ Fill this form and let me know of your interest and contact info:
 		<label for="contact-form-message">Message:</label>
 	    </div>
 	    <div class="right-column">
-		<textarea name="fields[message]" rows="7" id="contact-form-message"></textarea>
+		<textarea name="message" rows="7" id="contact-form-message"></textarea>
 	    </div>
 	</div>
 
 	<div class="row">
-	    <input type="hidden" name="options[redirect]" value="https://juliankamil.github.io/about/me" />
-	    <input type="hidden" name="options[slug]" value="" />
-	    <input type="hidden" name="fields[replying_to]" value="" id="contact-parent" />
+	    <input type="hidden" name="_subject" value="New contact request from juliankamil.github.io" />
+	    <input type="hidden" name="_format" value="plain" />
 	</div>
 	
 	<div class="row">
-            <input type="submit" id="contact-form-submit" value="Contact" />
+            <input type="submit" id="contact-form-submit" value="Send" />
 	</div>
     </form>
 </div>

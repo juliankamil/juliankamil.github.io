@@ -83,35 +83,6 @@ puts chatbot.message(request.to_json)
 
 <h3>Comments</h3>
 
-<!--
-<form method="POST" action="https://api.staticman.net/v2/entry/juliankamil/juliankamil.github.io/master/comments" id="comment-form">
-    <fieldset>
-	<label for="comment-form-message">Comment:</label>
-	<textarea name="fields[message]" type="text" rows="7" id="comment-form-message"></textarea>
-    </fieldset>
-
-    <fieldset>
-	<label for="comment-form-name">Name:</label>
-	<input name="fields[name]" type="text" id="comment-form-name"/>
-    </fieldset>
-    
-    <fieldset>
-	<label for="comment-form-email">Email:</label>
-	<input name="fields[email]" type="email" id="comment-form-email"/>
-    </fieldset>
-    
-    <fieldset class="hidden" style="display:none;">
-	<input type="hidden" name="options[redirect]"   value="https://juliankamil.github.io/blog/2018/04/18/a-ruby-chatbot-for-ibm-watson-assistant.html"/>
-	<input type="hidden" name="options[slug]"       value="a-ruby-chatbot-for-ibm-watson-assistant"/>
-	<input type="hidden" name="fields[replying_to]" value="" id="comment-parent"/>
-    </fieldset>
-
-    <fieldset>
-        <input type="submit" id="comment-form-submit" value="Comment" /></td>
-    </fieldset>
-</form>
--->
-
 <div class="form-container">
     <form id="comment-form" method="POST" action="https://api.staticman.net/v2/entry/juliankamil/juliankamil.github.io/master/comments">
 	<div class="row">
