@@ -711,7 +711,8 @@ form table.contact-form input#send:hover {
   clear: both; }
 
 #contact-form input[type=phone] {
-  width: 50%; }
+  width: 50%;
+  border: 1px solid #ccc; }
 
 label.radio-label {
   margin-top: 2px; }
