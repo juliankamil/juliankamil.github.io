@@ -712,7 +712,10 @@ form table.contact-form input#send:hover {
 
 #contact-form input[type=phone] {
   width: 50%;
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  box-sizing: border-box;
+  resize: vertical; }
 
 label.radio-label {
   margin-top: 2px; }
