@@ -493,49 +493,63 @@ pre {
   font-size: 0.85em; }
 
 /* CONTACT FORM */
+/*
 form table.contact-form {
-  width: 480px;
-  border: none;
-  table-layout: fixed;
-  font-size: 0.9em; }
+    width:480px;
+    border:none;
+    table-layout:fixed;
+    font-size:0.9em;
+}
 
 form table.contact-form td {
-  border: 0px solid blue;
-  padding: 4px; }
+    border:0px solid blue;
+    padding:4px;
+}
 
 form table.contact-form td.label {
-  width: 80px;
-  text-align: right; }
+    width:80px;
+    text-align:right;
+}
+
+form table.contact-form td.field {
+}
 
 form table.contact-form input {
-  border: 1px solid #ccc;
-  height: 1.5em;
-  font-size: 0.9em;
-  padding: 2px 4px; }
+    border:1px solid #ccc;
+    height:1.5em;
+    font-size:0.9em;
+    padding:2px 4px;
+}
 
 form table.contact-form input#name {
-  width: 180px; }
+    width:180px;
+}
 
 form table.contact-form input#email {
-  width: 180px; }
+    width:180px;
+}
 
 form table.contact-form textarea#message {
-  width: 200px;
-  border: 1px solid #ccc;
-  padding: 2px 4px;
-  font-size: 0.9em; }
+    width:200px;
+    border:1px solid #ccc;
+    padding:2px 4px;
+    font-size:0.9em;
+}
 
 form table.contact-form input#send {
-  height: 32px;
-  padding: 2px 12px;
-  border-radius: 5px; }
+    height:32px;
+    padding:2px 12px;
+    border-radius:5px;
+}
 
 form table.contact-form input#send:hover {
-  background-color: #eee; }
+    background-color:#eee;
+}
 
 .radio-input {
-  vertical-align: middle; }
-
+    vertical-align:middle;
+}
+*/
 /* COMMENT FORM */
 /*
 #comment-form {
@@ -637,6 +651,70 @@ form table.contact-form input#send:hover {
   content: "";
   display: table;
   clear: both; }
+
+@media screen and (max-width: 600px) {
+  div.right-column, div.left-column {
+    width: 100%;
+    margin-top: 0px;
+    text-align: left; }
+
+  input[type=submit] {
+    margin-top: 0px; } }
+/* NEW CONTACT FORM */
+#contact-form div.row {
+  padding: 3px 0px;
+  border: none; }
+
+#contact-form input, textarea {
+  font-size: 0.9em; }
+
+#contact-form input[type=text], input[type=email], textarea {
+  width: 100%;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  resize: vertical; }
+
+#contact-form label {
+  vertical-align: top;
+  display: inline-block;
+  padding: 0px;
+  font-size: 0.9em; }
+
+#contact-form input[type=submit] {
+  height: 32px;
+  padding: 2px 12px;
+  border-radius: 5px;
+  float: left;
+  margin-left: 84px; }
+
+#contact-form input[type=submit]:hover {
+  background-color: #eee; }
+
+#contact-form div.left-column {
+  float: left;
+  width: 25%;
+  padding: 3px 0px;
+  border: none;
+  width: 80px;
+  text-align: right; }
+
+#contact-form div.right-column {
+  float: left;
+  width: 75%;
+  padding: 2px 4px;
+  border: none; }
+
+#contact-form div.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+#contact-form input[type=phone] {
+  width: 50%; }
+
+label.radio-label {
+  margin-top: 2px; }
 
 @media screen and (max-width: 600px) {
   div.right-column, div.left-column {
