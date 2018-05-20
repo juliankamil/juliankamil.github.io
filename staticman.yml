@@ -1,11 +1,11 @@
 comments:
-  allowedFields: ["name", "email", "message"]
+  allowedFields: ["name", "email", "message", "replying_to"]
   branch: "master"
   commitMessage: "Added Staticman comment data"
   filename: "comment-{@timestamp}"
   format: "yaml"
   moderation: true
-  name: "juliankamil.github.io"
+  name: "Julian I. Kamil / etechcetera"
   path: "_data/comments/{options.slug}"
   requiredFields: ["name", "email", "message"]
   transforms:
