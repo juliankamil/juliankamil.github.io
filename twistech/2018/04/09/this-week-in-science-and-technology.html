@@ -28,6 +28,23 @@
 	<link rel="author" href="https://plus.google.com/+JulianKamil/">
     </head>
     <body>
+	<script>window.twttr = (function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	    if (d.getElementById(id)) return t;
+	    js = d.createElement(s);
+	    js.id = id;
+	    js.src = "https://platform.twitter.com/widgets.js";
+	    fjs.parentNode.insertBefore(js, fjs);
+
+	    t._e = [];
+	    t.ready = function(f) {
+	    t._e.push(f);
+	    };
+
+	    return t;
+	    }(document, "script", "twitter-wjs"));</script>
+
 	<div class="wrapper">
 	    <header>
 		<h1><a href="/" class="site-title">Julian I. Kamil</a></h1>
@@ -62,6 +79,12 @@
     
 </p>
 
+<p>
+    <a class="twitter-share-button" href='https://twitter.com/intent/tweet?text=This week in science and technology by @juliankamil #twistech #science #technology #physics #ai'>
+	Tweet This week in science and technology
+    </a>
+</p>
+
 <p><img src="https://media.newyorker.com/photos/59f8db3e6e4271693c76ceff/master/w_649,c_limit/Roberts-Dark-Matter.jpg" alt="x" /></p>
 
 <p><a href="https://gizmodo.com/if-tiny-dark-matter-particle-exists-this-experiment-is-1825105012"><span class="paragraph-title">If tiny dark matter particle exists, this experiment is now ready to find it.</span></a>
@@ -82,7 +105,7 @@ The new and improved <a href="https://cloud.google.com/speech-to-text/">Cloud Sp
 
 
 
-<h3>Comments</h3>
+<h3>Share your thoughts</h3>
 
 <div class="form-container">
     <form id="comment-form" method="POST" action="https://api.staticman.net/v2/entry/juliankamil/juliankamil.github.io/master/comments">
@@ -109,7 +132,7 @@ The new and improved <a href="https://cloud.google.com/speech-to-text/">Cloud Sp
 		<label for="comment-form-email">Email:</label>
 	    </div>
 	    <div class="right-column">
-		<input name="fields[email]" type="email" id="comment-form-email"/>
+		<input name="fields[email]" type="email" id="comment-form-email" placeholder="This will not be shown on your post"/>
 	    </div>
 	</div>
 
@@ -120,7 +143,7 @@ The new and improved <a href="https://cloud.google.com/speech-to-text/">Cloud Sp
 	</div>
 	
 	<div class="row">
-            <input type="submit" id="comment-form-submit" value="Comment" />
+            <input type="submit" id="comment-form-submit" value="Share" />
 	</div>
     </form>
 </div>

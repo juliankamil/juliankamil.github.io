@@ -28,6 +28,23 @@
 	<link rel="author" href="https://plus.google.com/+JulianKamil/">
     </head>
     <body>
+	<script>window.twttr = (function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	    if (d.getElementById(id)) return t;
+	    js = d.createElement(s);
+	    js.id = id;
+	    js.src = "https://platform.twitter.com/widgets.js";
+	    fjs.parentNode.insertBefore(js, fjs);
+
+	    t._e = [];
+	    t.ready = function(f) {
+	    t._e.push(f);
+	    };
+
+	    return t;
+	    }(document, "script", "twitter-wjs"));</script>
+
 	<div class="wrapper">
 	    <header>
 		<h1><a href="/" class="site-title">Julian I. Kamil</a></h1>
@@ -62,6 +79,12 @@
     
 </p>
 
+<p>
+    <a class="twitter-share-button" href='https://twitter.com/intent/tweet?text=The 40-40-20 rule in action by @juliankamil #blog #design thinking #digital marketing #social media'>
+	Tweet The 40-40-20 rule in action
+    </a>
+</p>
+
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/juliankamil?ref_src=twsrc%5Etfw">@juliankamil</a> Thanks so much for your help...here&#39;s some follow up from the wonderful Digital Marketing Workshop via IBM&#39;s Impact Grants.</p>&mdash; BookSpring (@bookspringatx) <a href="https://twitter.com/bookspringatx/status/848950822117527552?ref_src=twsrc%5Etfw">April 3, 2017</a></blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p />
@@ -81,7 +104,7 @@
 <p>It’s great to get a mention and to hear back from BookSpring that our advice had resulted in such an outcome. Visit the <a href="https://www.bookspring.org/">BookSpring website</a> and learn more about the wonderful work that they are doing for the kids and families in Austin and Central Texas.</p>
 
 
-<h3>Comments</h3>
+<h3>Share your thoughts</h3>
 
 <div class="form-container">
     <form id="comment-form" method="POST" action="https://api.staticman.net/v2/entry/juliankamil/juliankamil.github.io/master/comments">
@@ -108,7 +131,7 @@
 		<label for="comment-form-email">Email:</label>
 	    </div>
 	    <div class="right-column">
-		<input name="fields[email]" type="email" id="comment-form-email"/>
+		<input name="fields[email]" type="email" id="comment-form-email" placeholder="This will not be shown on your post"/>
 	    </div>
 	</div>
 
@@ -119,7 +142,7 @@
 	</div>
 	
 	<div class="row">
-            <input type="submit" id="comment-form-submit" value="Comment" />
+            <input type="submit" id="comment-form-submit" value="Share" />
 	</div>
     </form>
 </div>
