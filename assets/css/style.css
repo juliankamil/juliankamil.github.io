@@ -759,3 +759,16 @@ label.radio-label {
 
 .feed-icon {
   margin-top: 6px; }
+
+#mobile-only {
+  display: none; }
+
+#desktop-only {
+  display: block; }
+
+@media screen and (max-width: 768px) {
+  #mobile-only {
+    display: block; }
+
+  #desktop-only {
+    display: none; } }
