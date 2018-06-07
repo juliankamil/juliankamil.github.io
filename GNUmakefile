@@ -1,3 +1,4 @@
+SRC_DIR = $(HOME)/dev/github-pages/juliankamil.jekyll/_site-github
+
 all:
-	cp -fr ../juliankamil.jekyll/_site/* .
-	rm juliankamil.jekyll.gemspec
+	cp -fr $(SRC_DIR)/* .
