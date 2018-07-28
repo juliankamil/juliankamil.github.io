@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="https://juliankamil.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://juliankamil.github.io/" rel="alternate" type="text/html" /><updated>2018-07-28T01:17:33+00:00</updated><id>https://juliankamil.github.io/</id><title type="html">Julian I. Kamil</title><subtitle>News and opinions on science, technology, and pop culture</subtitle><author><name>juliankamil</name></author><entry><title type="html">Getting closer to the metal with KVM</title><link href="https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html" rel="alternate" type="text/html" title="Getting closer to the metal with KVM" /><published>2018-07-29T00:00:00+00:00</published><updated>2018-07-29T00:00:00+00:00</updated><id>https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm</id><content type="html" xml:base="https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html">&lt;p&gt;&lt;img src=&quot;https://blog.servermania.com/wordpress/wp-content/uploads/2017/03/bare-metal-server.jpg?x37307&quot; alt=&quot;x&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="https://juliankamil.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://juliankamil.github.io/" rel="alternate" type="text/html" /><updated>2018-07-28T12:42:32+00:00</updated><id>https://juliankamil.github.io/</id><title type="html">Julian I. Kamil</title><subtitle>News and opinions on science, technology, and pop culture</subtitle><author><name>juliankamil</name></author><entry><title type="html">Getting closer to the metal with KVM</title><link href="https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html" rel="alternate" type="text/html" title="Getting closer to the metal with KVM" /><published>2018-07-29T00:00:00+00:00</published><updated>2018-07-29T00:00:00+00:00</updated><id>https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm</id><content type="html" xml:base="https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html">&lt;p&gt;&lt;img src=&quot;https://blog.servermania.com/wordpress/wp-content/uploads/2017/03/bare-metal-server.jpg?x37307&quot; alt=&quot;x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In case you haven’t noticed, the &lt;a href=&quot;https://www.ubuntu.com/server&quot;&gt;Ubuntu Server&lt;/a&gt; distribution has made setting up and running the
 &lt;a href=&quot;https://www.linux-kvm.org/page/Main_Page&quot;&gt;Linux KVM (Kernel Virtual Machine)&lt;/a&gt; for virtualization dead simple. You can follow
 &lt;a href=&quot;https://linuxconfig.org/install-and-set-up-kvm-on-ubuntu-18-04-bionic-beaver-linux&quot;&gt;this instruction on LinuxConfig&lt;/a&gt; to install
 and configure a server with the graphical management tools, or if you are like me and prefer the command line interface,
-simply install the minimal Ubuntu Server along with OpenSSH and &lt;a href=&quot;https://www.cyberciti.biz/faq/installing-kvm-on-ubuntu-16-04-lts-server/&quot;&gt;install and configure KVM with only the command line management
-tools&lt;/a&gt;. Not only that this approach reduces server
-storage space requirement, but it also avoids the need to bring in the full graphical windowing system and results in a simpler,
-more secure overall server configuration.&lt;/p&gt;
+simply install the minimal Ubuntu Server along with OpenSSH service and &lt;a href=&quot;https://www.cyberciti.biz/faq/installing-kvm-on-ubuntu-16-04-lts-server/&quot;&gt;install and configure KVM with only the command line
+management tools&lt;/a&gt;. Not only that this approach reduces
+server storage space requirement, but it also avoids the need to bring in the full graphical windowing system and results in a
+simpler, more secure overall server configuration.&lt;/p&gt;
 
-&lt;p&gt;KVM turns the Linux kernel into a Type 1 &lt;a href=&quot;https://en.wikipedia.org/wiki/Hypervisor&quot;&gt;virtual machine monitor or hypervisor&lt;/a&gt;,
-providing efficient, high performance, &lt;em&gt;closer-to-the-metal&lt;/em&gt; platform for virtualization, while conveniently letting the
-remaining OS environment to continue to be available and function to run other applications and services.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine&quot;&gt;KVM&lt;/a&gt; turns the Linux kernel into a Type 1 &lt;a href=&quot;https://en.wikipedia.org/wiki/Hypervisor&quot;&gt;virtual machine monitor or
+hypervisor&lt;/a&gt;, providing efficient, high performance, &lt;em&gt;closer-to-the-metal&lt;/em&gt; platform for
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Paravirtualization&quot;&gt;paravirtualization&lt;/a&gt; that takes advantage of &lt;a href=&quot;https://en.wikipedia.org/wiki/X86_virtualization#Intel_virtualization_(VT-x)&quot;&gt;Intel
+VT-x&lt;/a&gt; or
+&lt;a href=&quot;https://en.wikipedia.org/wiki/X86_virtualization#AMD_virtualization_(AMD-V)&quot;&gt;AMD-V&lt;/a&gt; CPU &lt;a href=&quot;https://en.wikipedia.org/wiki/Hardware-assisted_virtualization&quot;&gt;Hardware Virtual Machine
+(HVM)&lt;/a&gt; instruction sets, while conveniently letting the remaining OS environment to continue to be available and function to run other applications and services.&lt;/p&gt;
 
 &lt;h3 id=&quot;creating-your-first-kvm-virtual-machine&quot;&gt;Creating your first KVM virtual machine&lt;/h3&gt;
 

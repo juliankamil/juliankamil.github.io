@@ -98,14 +98,17 @@
 <a href="https://www.linux-kvm.org/page/Main_Page">Linux KVM (Kernel Virtual Machine)</a> for virtualization dead simple. You can follow
 <a href="https://linuxconfig.org/install-and-set-up-kvm-on-ubuntu-18-04-bionic-beaver-linux">this instruction on LinuxConfig</a> to install
 and configure a server with the graphical management tools, or if you are like me and prefer the command line interface,
-simply install the minimal Ubuntu Server along with OpenSSH and <a href="https://www.cyberciti.biz/faq/installing-kvm-on-ubuntu-16-04-lts-server/">install and configure KVM with only the command line management
-tools</a>. Not only that this approach reduces server
-storage space requirement, but it also avoids the need to bring in the full graphical windowing system and results in a simpler,
-more secure overall server configuration.</p>
+simply install the minimal Ubuntu Server along with OpenSSH service and <a href="https://www.cyberciti.biz/faq/installing-kvm-on-ubuntu-16-04-lts-server/">install and configure KVM with only the command line
+management tools</a>. Not only that this approach reduces
+server storage space requirement, but it also avoids the need to bring in the full graphical windowing system and results in a
+simpler, more secure overall server configuration.</p>
 
-<p>KVM turns the Linux kernel into a Type 1 <a href="https://en.wikipedia.org/wiki/Hypervisor">virtual machine monitor or hypervisor</a>,
-providing efficient, high performance, <em>closer-to-the-metal</em> platform for virtualization, while conveniently letting the
-remaining OS environment to continue to be available and function to run other applications and services.</p>
+<p><a href="https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine">KVM</a> turns the Linux kernel into a Type 1 <a href="https://en.wikipedia.org/wiki/Hypervisor">virtual machine monitor or
+hypervisor</a>, providing efficient, high performance, <em>closer-to-the-metal</em> platform for
+<a href="https://en.wikipedia.org/wiki/Paravirtualization">paravirtualization</a> that takes advantage of <a href="https://en.wikipedia.org/wiki/X86_virtualization#Intel_virtualization_(VT-x)">Intel
+VT-x</a> or
+<a href="https://en.wikipedia.org/wiki/X86_virtualization#AMD_virtualization_(AMD-V)">AMD-V</a> CPU <a href="https://en.wikipedia.org/wiki/Hardware-assisted_virtualization">Hardware Virtual Machine
+(HVM)</a> instruction sets, while conveniently letting the remaining OS environment to continue to be available and function to run other applications and services.</p>
 
 <h3 id="creating-your-first-kvm-virtual-machine">Creating your first KVM virtual machine</h3>
 
