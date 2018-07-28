@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Getting closer to the metal with KVM | Julian I. Kamil</title>
+<meta name="generator" content="Jekyll v3.8.1" />
+<meta property="og:title" content="Getting closer to the metal with KVM" />
+<meta name="author" content="juliankamil" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In case you haven’t noticed, the Ubuntu Server distribution has made setting up and running the Linux KVM (Kernel Virtual Machine) for virtualization dead simple. You can follow this instruction on LinuxConfig to install and configure a server with the graphical management tools, or if you are like me and prefer the command line interface, simply install the minimal Ubuntu Server along with OpenSSH and install and configure KVM with only the command line management tools. Not only that this approach reduces server storage space requirement, but it also avoids the need to bring in the full graphical windowing system and results in a simpler, more secure overall server configuration." />
+<meta property="og:description" content="In case you haven’t noticed, the Ubuntu Server distribution has made setting up and running the Linux KVM (Kernel Virtual Machine) for virtualization dead simple. You can follow this instruction on LinuxConfig to install and configure a server with the graphical management tools, or if you are like me and prefer the command line interface, simply install the minimal Ubuntu Server along with OpenSSH and install and configure KVM with only the command line management tools. Not only that this approach reduces server storage space requirement, but it also avoids the need to bring in the full graphical windowing system and results in a simpler, more secure overall server configuration." />
+<link rel="canonical" href="https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html" />
+<meta property="og:url" content="https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html" />
+<meta property="og:site_name" content="Julian I. Kamil" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@juliankamil" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Getting closer to the metal with KVM","dateModified":"2018-07-29T00:00:00+00:00","datePublished":"2018-07-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html"},"url":"https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html","author":{"@type":"Person","name":"juliankamil"},"description":"In case you haven’t noticed, the Ubuntu Server distribution has made setting up and running the Linux KVM (Kernel Virtual Machine) for virtualization dead simple. You can follow this instruction on LinuxConfig to install and configure a server with the graphical management tools, or if you are like me and prefer the command line interface, simply install the minimal Ubuntu Server along with OpenSSH and install and configure KVM with only the command line management tools. Not only that this approach reduces server storage space requirement, but it also avoids the need to bring in the full graphical windowing system and results in a simpler, more secure overall server configuration.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://juliankamil.github.io/assets/img/Avatar%20-%20Rounded%20-%20BW%20-%20790.jpg"},"name":"juliankamil"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+	<link rel="stylesheet" href="/assets/css/style.css?v=">
+	<link rel="author" href="https://plus.google.com/+JulianKamil/">
+    </head>
+    <body>
+	<script src="https://embed.small.chat/T1L5FAXK4GAV0DBBK4.js" async></script>
+	
+	<script>window.twttr = (function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	    if (d.getElementById(id)) return t;
+	    js = d.createElement(s);
+	    js.id = id;
+	    js.src = "https://platform.twitter.com/widgets.js";
+	    fjs.parentNode.insertBefore(js, fjs);
+
+	    t._e = [];
+	    t.ready = function(f) {
+	    t._e.push(f);
+	    };
+
+	    return t;
+	    }(document, "script", "twitter-wjs"));
+	</script>
+
+	<div class="wrapper">
+	    <header>
+		<h1><a href="/" class="site-title">Julian I. Kamil</a></h1>
+
+		
+		<h2>etechcetera</h2>
+		
+
+		
+		<img src="/assets/img/Avatar%20-%20Rounded%20-%20BW%20-%20790.jpg" alt="Logo" height="160" width="160" />
+		
+
+		<div class="site-tag-line">News and opinions on science, technology, and pop culture</div>
+
+		<p class="view">
+		    <a href="/">Home</a><br/>
+		    <a href="/about/me">About me</a><br/>
+		    <a href="https://github.com/juliankamil">GitHub</a><br/>
+		    <a href="https://twitter.com/juliankamil">Twitter</a><br/>
+		    <a href="/about/me/on/wechat">WeChat</a><br/>
+		    <a href="https://juliankamil.blogspot.com/">Blogspot</a><br/>
+		</p>
+	    </header>
+	    <section>
+
+		<h2>Getting closer to the metal with KVM</h2>
+
+<p>
+    <span class="date-line">July 29, 2018</span>
+    
+    <span class="tag-line">/ Tags: blog - virtualization - hypervisor - infrastructure</span>
+    
+</p>
+
+<p>
+    <span>
+	<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Getting closer to the metal with KVM by @juliankamil #blog #virtualization #hypervisor #infrastructure">Tweet Getting closer to the metal with KVM</a>
+    </span>
+    <span>
+	<iframe src="https://www.facebook.com/plugins/share_button.php?href=https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+    </span>
+</p>
+
+
+<p>In case you haven’t noticed, the <a href="https://www.ubuntu.com/server">Ubuntu Server</a> distribution has made setting up and running the
+<a href="https://www.linux-kvm.org/page/Main_Page">Linux KVM (Kernel Virtual Machine)</a> for virtualization dead simple. You can follow
+<a href="https://linuxconfig.org/install-and-set-up-kvm-on-ubuntu-18-04-bionic-beaver-linux">this instruction on LinuxConfig</a> to install
+and configure a server with the graphical management tools, or if you are like me and prefer the command line interface,
+simply install the minimal Ubuntu Server along with OpenSSH and <a href="https://www.cyberciti.biz/faq/installing-kvm-on-ubuntu-16-04-lts-server/">install and configure KVM with only the command line management
+tools</a>. Not only that this approach reduces server
+storage space requirement, but it also avoids the need to bring in the full graphical windowing system and results in a simpler,
+more secure overall server configuration.</p>
+
+<p>KVM turns the Linux kernel into a Type 1 <a href="https://en.wikipedia.org/wiki/Hypervisor">virtual machine monitor or hypervisor</a>,
+providing efficient, high performance, <em>closer-to-the-metal</em> platform for virtualization, while conveniently letting the
+remaining OS environment to continue to be available and function to run other applications and services.</p>
+
+<h3 id="creating-your-first-kvm-virtual-machine">Creating your first KVM virtual machine</h3>
+
+<p>To define a new guest VM, you will need to create a domain XML definition file and run it through the <code class="highlighter-rouge">virsh define</code> command. The
+simplest way to do this without using any graphical tools is by starting with a sample template like the one below, and then
+editing and modifying it appropriately.</p>
+
+<p>Domain XML file <code class="highlighter-rouge">testvm.xml</code>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;domain type='kvm'&gt;
+  &lt;name&gt;testvm&lt;/name&gt;
+  &lt;uuid&gt;4dea24b3-1d52-d8f3-2516-782e98a23fa0&lt;/uuid&gt;
+  &lt;memory&gt;131072&lt;/memory&gt;
+  &lt;vcpu&gt;1&lt;/vcpu&gt;
+  &lt;os&gt;
+    &lt;type arch="i686"&gt;hvm&lt;/type&gt;
+    &lt;boot dev='cdrom'/&gt;
+    &lt;boot dev='hd'/&gt;
+  &lt;/os&gt;
+  &lt;clock sync="localtime"/&gt;
+  &lt;devices&gt;
+    &lt;emulator&gt;/usr/bin/kvm&lt;/emulator&gt;
+    &lt;disk type='file' device='disk'&gt;
+      &lt;source file='/var/lib/libvirt/images/testvm.img'/&gt;
+      &lt;target dev='hda'/&gt;
+    &lt;/disk&gt;
+    &lt;disk type="file" device="cdrom"&gt;
+      &lt;driver name="qemu" type="raw"/&gt;
+      &lt;source file="/var/lib/libvirt/boot/ubuntu-18.04-live-server-amd64.iso"/&gt;
+      &lt;target dev="hdc" bus="ide"/&gt;
+      &lt;readonly/&gt;
+      &lt;address type="drive" controller="0" bus="1" target="0" unit="0"/&gt;
+    &lt;/disk&gt;
+    &lt;interface type='network'&gt;
+      &lt;source network='default'/&gt;
+      &lt;mac address='24:42:53:21:52:45'/&gt;
+    &lt;/interface&gt;
+    &lt;graphics type='vnc' port='-1' autoport='yes' listen='0.0.0.0'/&gt;
+  &lt;/devices&gt;
+&lt;/domain&gt;
+</code></pre></div></div>
+<p>Before using the sample file above, you must edit it and change the UUID and the MAC address — <em>which can be generated
+randomly</em> — and make sure it points to valid and existing disk image and ISO image files. Next, issue the following commands
+to create the guest VM and find out the VNC port number for the console.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># create disk image
+sudo mkdir -p /var/lib/libvirt/images
+sudo qemu-img create -f qcow2 /var/lib/libvirt/images/testvm.img
+
+# define the guest vm
+sudo virsh define testvm.xml
+
+# find out the vnc port number the guest is listening to
+sudo netstat -nap | egrep '(kvm|qemu)'
+</code></pre></div></div>
+<p>Use a VNC client to connect to the guest VM console and complete the OS installation. Once the OS is installed, you will need to
+eject the installation media and reorder the disk boot sequence. To do that, issue the following commands:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># eject the installation media
+sudo virsh change-media testvm hdc --eject
+
+# edit the guest configuration to reorder boot sequence
+sudo virsh edit testvm
+</code></pre></div></div>
+<p>And that’s all there is to it… You should now have a guest VM running under the Linux KVM hypervisor in your bare metal server.</p>
+
+
+<h3>More articles</h3>
+
+<ul class="next-up-list">
+    
+    
+    
+    
+    <li><a href="/twistech/2018/07/27/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">July 27, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/06/08/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">June 8, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/06/01/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">June 1, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/05/25/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">May 25, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/05/18/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">May 18, 2018</span></li>
+    
+    
+    
+    <li><a href="/blog/2018/05/14/the-40-40-20-rule-in-action.html">The 40-40-20 rule in action</a> / <span class="source-line">May 14, 2018</span></li>
+    
+    
+    
+    <li><a href="/blog/2018/04/18/a-ruby-chatbot-for-ibm-watson-assistant.html">A Ruby chatbot for IBM Watson Assistant</a> / <span class="source-line">April 18, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/04/09/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">April 9, 2018</span></li>
+    
+    
+</ul>
+
+
+<h3>Share your thoughts</h3>
+
+<p><span class="paragraph-title">Getting closer to the metal with KVM</span> / <span class="source-line">July 29, 2018</span></p>
+
+<div class="form-container">
+    <form id="comment-form" method="POST" action="https://api.staticman.net/v2/entry/juliankamil/juliankamil.github.io/master/comments">
+	<div class="row">
+	    <div class="left-column">
+		<label for="comment-form-message">Comment:</label>
+	    </div>
+	    <div class="right-column">
+		<textarea name="fields[content]" rows="7" id="comment-form-message"></textarea>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <div class="left-column">
+		<label for="comment-form-name">Name:</label>
+	    </div>
+	    <div class="right-column">
+		<input name="fields[name]" type="text" id="comment-form-name"/>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <div class="left-column">
+		<label for="comment-form-email">Email:</label>
+	    </div>
+	    <div class="right-column">
+		<input name="fields[email]" type="email" id="comment-form-email" placeholder="This will not be shown in your post"/>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <input type="hidden" name="options[redirect]"   value="https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html"/>
+	    <input type="hidden" name="options[slug]"       value="getting-closer-to-the-metal-with-kvm"/>
+	    <input type="hidden" name="fields[replying_to]" value="" id="comment-parent"/>
+	</div>
+	
+	<div class="row">
+            <input type="submit" id="comment-form-submit" value="Share" />
+	</div>
+    </form>
+</div>
+
+<hr class="comment-separator"/>
+
+
+
+
+
+
+	    </section>
+	    <footer>
+		<p>
+		    <small>
+			Handcrafted with <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://staticman.net/">Staticman</a>
+		    </small><br/>
+		    <small>Hosted on <a href="https://pages.github.com/">GitHub Pages</a></small><br/>
+		    <a href="/feed.xml">
+			<img class="feed-icon" src="/assets/img/rss_512.png" height="24" width="24"/>
+		    </a>
+		</p>
+	    </footer>
+	</div>
+	<script src="/assets/js/scale.fix.js"></script>
+	
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	    ga('create', 'UA-119753667-1', 'auto');
+	    ga('send', 'pageview');
+	</script>
+	
+    </body>
+</html>
