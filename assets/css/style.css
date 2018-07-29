@@ -772,3 +772,11 @@ label.radio-label {
 
   #desktop-only {
     display: none; } }
+p .highlighter-rouge {
+  background-color: #f4fff4;
+  border: 1px solid #ddd;
+  font-size: 0.85em;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-left: 3px;
+  margin-right: 3px; }
