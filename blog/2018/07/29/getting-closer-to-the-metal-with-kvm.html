@@ -16,12 +16,12 @@
 <meta property="og:url" content="https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html" />
 <meta property="og:site_name" content="Julian I. Kamil" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-07-29T00:00:00-07:00" />
+<meta property="article:published_time" content="2018-07-29T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
 <meta name="twitter:creator" content="@juliankamil" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://juliankamil.github.io/assets/img/Avatar%20-%20Rounded%20-%20BW%20-%20790.jpg"},"name":"juliankamil"},"headline":"Getting closer to the metal with KVM","dateModified":"2018-07-29T00:00:00-07:00","datePublished":"2018-07-29T00:00:00-07:00","author":{"@type":"Person","name":"juliankamil"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html"},"description":"News and opinions on science, technology, and pop culture","@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Getting closer to the metal with KVM","dateModified":"2018-07-29T00:00:00+00:00","datePublished":"2018-07-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html"},"url":"https://juliankamil.github.io/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html","author":{"@type":"Person","name":"juliankamil"},"description":"News and opinions on science, technology, and pop culture","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://juliankamil.github.io/assets/img/Avatar%20-%20Rounded%20-%20BW%20-%20790.jpg"},"name":"juliankamil"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 	<link rel="stylesheet" href="/assets/css/style.css?v=">
@@ -150,7 +150,7 @@ editing and modifying it appropriately.</p>
 &lt;/domain&gt;
 </code></pre></div></div>
 <p>Before using the sample file above, you must edit it and change the UUID and the MAC address — <em>which can be generated
-randomly, see below</em> — and make sure it points to valid and existing disk image and ISO image files. Next, issue the following commands
+randomly, see the tips below</em> — and make sure it points to valid and existing disk image and ISO image files. Next, issue the following commands
 to create the guest VM and find out the VNC port number for the console.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># create disk image
 sudo mkdir -p /var/lib/libvirt/images
@@ -172,12 +172,22 @@ sudo virsh edit testvm
 </code></pre></div></div>
 <p>And that’s all there is to it… You should now have a guest VM running under the Linux KVM hypervisor in your bare metal server.</p>
 
-<h3 id="generating-uuids">Generating UUIDs</h3>
+<h3 id="tip-generating-uuids">Tip: Generating UUIDs</h3>
 
 <p>The <code class="highlighter-rouge">uuid</code> command line tool generates standards compliant, globally unique identifiers (<em>universally unique IDs</em> or UUIDs) that are
 computationally difficult to guess and can be appropriately used to tag both short-lived and highly-persistent network objects
 such as guest virtual machines. If not already installed, you can issue the following command to install the tool:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update &amp;&amp; sudo apt-get -y install uuid
+</code></pre></div></div>
+
+<h3 id="tip-generating-mac-addresses">Tip: Generating MAC addresses</h3>
+
+<p>There is not a readily available command line tool for generating MAC addresses, but you can easily make one based on the standard
+random number generator with the following shell script, which you may want to save as <code class="highlighter-rouge">make-mac-address.sh</code> in the directory
+<code class="highlighter-rouge">/usr/local/bin</code>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#! /bin/sh</span>
+
+<span class="nb">tr</span> <span class="nt">-dc</span> A-F0-9 &lt; /dev/urandom | <span class="nb">head</span> <span class="nt">-c</span> 10 | <span class="nb">sed</span> <span class="nt">-r</span> <span class="s1">'s/(..)/\1:/g;s/:$//;s/^/02:/'</span>
 </code></pre></div></div>
 
 
