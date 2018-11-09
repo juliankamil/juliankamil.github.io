@@ -7,10 +7,10 @@ entries:
     description: Emma is a cognitive assistant that can answer questions about healthcare
       benefits
     digest: f9630cf838cb13fa3ab6fce60611754f955deea1cc08d253c01c1c5175b145cb
-    icon: emma.png
+    icon: https://juliankamil.github.io/charts/emma/emma.png
     name: emma
     urls:
-    - emma/emma-0.1.0.tgz
+    - https://juliankamil.github.io/charts/emma/emma-0.1.0.tgz
     version: 0.1.0
   emma-db:
   - apiVersion: v1
@@ -18,10 +18,10 @@ entries:
     created: 2018-11-09T23:30:36.60940029Z
     description: Emma DB
     digest: 670076e214fa03005a89ca7ccbd97489eb1e7472c1c468f62c7b3c148c110853
-    icon: emma.png
+    icon: https://juliankamil.github.io/charts/emma-db/emma.png
     name: emma-db
     urls:
-    - emma-db/emma-db-0.1.0.tgz
+    - https://juliankamil.github.io/charts/emma-db/emma-db-0.1.0.tgz
     version: 0.1.0
   smokey:
   - apiVersion: v1
@@ -31,6 +31,6 @@ entries:
     digest: e058801cf283d4d5111c3df1678f1a63efeaf11af0eacf14d099c8762dcd7155
     name: smokey
     urls:
-    - smokey/smokey-0.1.0.tgz
+    - https://juliankamil.github.io/charts/smokey/smokey-0.1.0.tgz
     version: 0.1.0
 generated: 2018-11-09T23:30:36.592416096Z
