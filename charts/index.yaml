@@ -1,36 +1,25 @@
 apiVersion: v1
 entries:
-  emma:
+  emma-app:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-09T23:30:36.601472747Z
-    description: Emma is a cognitive assistant that can answer questions about healthcare
-      benefits
-    digest: f9630cf838cb13fa3ab6fce60611754f955deea1cc08d253c01c1c5175b145cb
-    icon: https://juliankamil.github.io/charts/emma/emma.png
-    name: emma
+    created: 2018-11-12T17:18:10.877547162Z
+    description: Emma App (SOE)
+    digest: 0d298fd87b2e1b3237ae38ae2f0d733741b6c9b248c8d9635907d5db00e55a6b
+    icon: https://juliankamil.github.io/charts/emma-app/emma-icons-soe.png
+    name: emma-app
     urls:
-    - https://juliankamil.github.io/charts/emma/emma-0.1.0.tgz
+    - https://juliankamil.github.io/charts/emma-app/emma-app-0.1.0.tgz
     version: 0.1.0
   emma-db:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-09T23:30:36.60940029Z
+    created: 2018-11-12T17:18:10.892023224Z
     description: Emma DB
-    digest: 670076e214fa03005a89ca7ccbd97489eb1e7472c1c468f62c7b3c148c110853
-    icon: https://juliankamil.github.io/charts/emma-db/emma.png
+    digest: ac161c958e124870ef909e1148eeb9ea7800c7535179529a944bd28135b75294
+    icon: https://juliankamil.github.io/charts/emma-db/emma-icons-db.png
     name: emma-db
     urls:
     - https://juliankamil.github.io/charts/emma-db/emma-db-0.1.0.tgz
     version: 0.1.0
-  smokey:
-  - apiVersion: v1
-    appVersion: "1.0"
-    created: 2018-11-09T23:30:36.609682895Z
-    description: A Helm chart for Kubernetes
-    digest: e058801cf283d4d5111c3df1678f1a63efeaf11af0eacf14d099c8762dcd7155
-    name: smokey
-    urls:
-    - https://juliankamil.github.io/charts/smokey/smokey-0.1.0.tgz
-    version: 0.1.0
-generated: 2018-11-09T23:30:36.592416096Z
+generated: 2018-11-12T17:18:10.869135019Z
