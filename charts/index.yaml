@@ -3,9 +3,9 @@ entries:
   emma-app:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-12T17:18:10.877547162Z
+    created: 2018-11-12T19:51:07.810020594Z
     description: Emma App (SOE)
-    digest: 0d298fd87b2e1b3237ae38ae2f0d733741b6c9b248c8d9635907d5db00e55a6b
+    digest: 66a48d2327a5125d94f518f0401c2d6fa5c5993fa05af8d45563f4dc1717babe
     icon: https://juliankamil.github.io/charts/emma-app/emma-icons-soe.png
     name: emma-app
     urls:
@@ -14,12 +14,25 @@ entries:
   emma-db:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-12T17:18:10.892023224Z
+    created: 2018-11-12T19:51:07.850053957Z
     description: Emma DB
-    digest: ac161c958e124870ef909e1148eeb9ea7800c7535179529a944bd28135b75294
+    digest: ab58b54bfd6ace97091b88dedfd6f3a02dea563e712d838f4c699278bfc37cdd
     icon: https://juliankamil.github.io/charts/emma-db/emma-icons-db.png
     name: emma-db
     urls:
     - https://juliankamil.github.io/charts/emma-db/emma-db-0.1.0.tgz
     version: 0.1.0
-generated: 2018-11-12T17:18:10.869135019Z
+  emma-ui:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-11-12T19:51:07.863570342Z
+    description: Emma UI application.  This application requires a working Emma App
+      (SOE) and the corresponding database, Emma DB (MySQL).  Please deploy and configure
+      both before deploying this application.
+    digest: 7b6d35caca4842fa9e6579288bcfdb90e6cb3e0e78c79c58c2366a0389ac2889
+    icon: https://juliankamil.github.io/charts/emma-ui/emma-icons-ui.png
+    name: emma-ui
+    urls:
+    - https://juliankamil.github.io/charts/emma-ui/emma-ui-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-11-12T19:51:07.8012107Z
