@@ -44,7 +44,7 @@ entries:
       (SOE) to store context data of the user interacting with the Emma UI application.  Please
       deploy and configure this database before deploying Emma App (SOE) and Emma
       UI applications.
-    digest: 3ec17ba27ab7a5f3516e9bfa113133211040475eb7adaa27e9a5edbeb05e17b1
+    digest: 37ec99cb35417e722ca2c0b397f5fcb522d35cfa841c02ad9f108b57454fdb8d
     icon: https://juliankamil.github.io/charts/emma-redis/emma-icons-db.png
     name: emma-redis
     urls:
