@@ -17,10 +17,38 @@ entries:
     created: 2018-11-12T19:51:07.850053957Z
     description: Emma DB
     digest: ab58b54bfd6ace97091b88dedfd6f3a02dea563e712d838f4c699278bfc37cdd
-    icon: https://juliankamil.github.io/charts/emma-db/emma-icons-db.png
+    icon: https://juliankamil.github.io/charts/wemma-db/emma-icons-db.png
     name: emma-db
     urls:
     - https://juliankamil.github.io/charts/emma-db/emma-db-0.1.0.tgz
+    version: 0.1.0
+  emma-mongo:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-11-15T16:38:21.313990462Z
+    description: Emma Mongo database.  This is a prerequisite used by the Emma App
+      (SOE) to store conversation logs and context data occurring in the Emma UI application.  Please
+      deploy and configure this database before deploying Emma App (SOE) and Emma
+      UI applications.
+    digest: bec334753f4769cedae1bc1db255fe7d3d786bb241af3c60f87a1a234266bd65
+    icon: https://juliankamil.github.io/charts/emma-mongo/emma-icons-db.png
+    name: emma-mongo
+    urls:
+    - https://juliankamil.github.io/charts/emma-mongo/emma-mongo-0.1.0.tgz
+    version: 0.1.0
+  emma-redis:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-11-15T16:38:21.320840602Z
+    description: Emma Redis database.  This is a prerequisite used by the Emma App
+      (SOE) to store context data of the user interacting with the Emma UI application.  Please
+      deploy and configure this database before deploying Emma App (SOE) and Emma
+      UI applications.
+    digest: 8bde5651206559469f737158c2826ca5e0a2d02db91e55ee780339c1b381aecf
+    icon: https://juliankamil.github.io/charts/emma-redis/emma-icons-db.png
+    name: emma-redis
+    urls:
+    - https://juliankamil.github.io/charts/emma-redis/emma-redis-0.1.0.tgz
     version: 0.1.0
   emma-ui:
   - apiVersion: v1
