@@ -1,66 +1,66 @@
 apiVersion: v1
 entries:
-  emma-app:
+  emma-app-soe:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-12T19:51:07.810020594Z
+    created: 2018-12-04T00:08:43.350379515Z
     description: Emma App (SOE)
-    digest: d2e9b52fc03e323a9fb71c624fc2232559751a7de2eab0d2e9c6bd8a84a8cb7e
-    icon: https://juliankamil.github.io/charts/emma-app/emma-icons-soe.png
-    name: emma-app
+    digest: f78ae9cc857c0e0916a47d94498e3320624eae976300eca271a84c67c2ca027d
+    icon: https://juliankamil.github.io/charts/emma-app-soe/emma-icons-app-soe.png
+    name: emma-app-soe
     urls:
-    - https://juliankamil.github.io/charts/emma-app/emma-app-0.1.0.tgz
-    version: 0.1.0
-  emma-db:
+    - https://juliankamil.github.io/charts/emma-app-soe/emma-app-soe-0.1.1.tgz
+    version: 0.1.1
+  emma-app-webchat:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-12T19:51:07.850053957Z
-    description: Emma DB
-    digest: ab58b54bfd6ace97091b88dedfd6f3a02dea563e712d838f4c699278bfc37cdd
-    icon: https://juliankamil.github.io/charts/emma-db/emma-icons-db.png
-    name: emma-db
+    created: 2018-12-04T00:08:43.374872354Z
+    description: Emma UI application.  This application requires a working Emma App
+      (SOE) and the corresponding database, Emma DB (MySQL).  Please deploy and configure
+      both before deploying this application.
+    digest: 9527d462cae6bbecdf837df7614f34205f3ce28ab0972c0675794d353e14027c
+    icon: https://juliankamil.github.io/charts/emma-app-webchat/emma-icons-app-webchat.png
+    name: emma-app-webchat
     urls:
-    - https://juliankamil.github.io/charts/emma-db/emma-db-0.1.0.tgz
-    version: 0.1.0
-  emma-mongo:
+    - https://juliankamil.github.io/charts/emma-app-webchat/emma-app-webchat-0.1.1.tgz
+    version: 0.1.1
+  emma-db-mongo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-15T16:38:21.313990462Z
+    created: 2018-12-04T00:08:43.408948298Z
     description: Emma Mongo database.  This is a prerequisite used by the Emma App
       (SOE) to store conversation logs and context data occurring in the Emma UI application.  Please
       deploy and configure this database before deploying Emma App (SOE) and Emma
       UI applications.
-    digest: bec334753f4769cedae1bc1db255fe7d3d786bb241af3c60f87a1a234266bd65
-    icon: https://juliankamil.github.io/charts/emma-mongo/emma-icons-db.png
-    name: emma-mongo
+    digest: e8a78f73d5de1036f040b896aee908bad7651997a4b39c3c04e3d8ee8e51ea8e
+    icon: https://juliankamil.github.io/charts/emma-db-mongo/emma-icons-db-mongo.png
+    name: emma-db-mongo
     urls:
-    - https://juliankamil.github.io/charts/emma-mongo/emma-mongo-0.1.0.tgz
-    version: 0.1.0
-  emma-redis:
+    - https://juliankamil.github.io/charts/emma-db-mongo/emma-db-mongo-0.1.1.tgz
+    version: 0.1.1
+  emma-db-mysql:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-15T16:38:21.320840602Z
+    created: 2018-12-04T00:08:43.445389934Z
+    description: Emma DB
+    digest: 94f814ab9035aec04f2f8f0916dab33619b61680b5a17d8ddfb2462ebf7f45ea
+    icon: https://juliankamil.github.io/charts/emma-db-mysql/emma-icons-db-mysql.png
+    name: emma-db-mysql
+    urls:
+    - https://juliankamil.github.io/charts/emma-db-mysql/emma-db-mysql-0.1.1.tgz
+    version: 0.1.1
+  emma-db-redis:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-12-04T00:08:43.451914387Z
     description: Emma Redis database.  This is a prerequisite used by the Emma App
       (SOE) to store context data of the user interacting with the Emma UI application.  Please
       deploy and configure this database before deploying Emma App (SOE) and Emma
       UI applications.
-    digest: ac83ec4a6fd91530a24f00440c2ea55232dbdbea0fd848e04ee372c6ce37acd4
-    icon: https://juliankamil.github.io/charts/emma-redis/emma-icons-db.png
-    name: emma-redis
+    digest: 1a5dce4327fbba0d9f5ce750e0a687f18ec095d69eb86c6576b479ad56ea87a3
+    icon: https://juliankamil.github.io/charts/emma-db-redis/emma-icons-db-redis.png
+    name: emma-db-redis
     urls:
-    - https://juliankamil.github.io/charts/emma-redis/emma-redis-0.1.0.tgz
-    version: 0.1.0
-  emma-ui:
-  - apiVersion: v1
-    appVersion: "1.0"
-    created: 2018-11-12T19:51:07.863570342Z
-    description: Emma UI application.  This application requires a working Emma App
-      (SOE) and the corresponding database, Emma DB (MySQL).  Please deploy and configure
-      both before deploying this application.
-    digest: 7b6d35caca4842fa9e6579288bcfdb90e6cb3e0e78c79c58c2366a0389ac2889
-    icon: https://juliankamil.github.io/charts/emma-ui/emma-icons-ui.png
-    name: emma-ui
-    urls:
-    - https://juliankamil.github.io/charts/emma-ui/emma-ui-0.1.0.tgz
-    version: 0.1.0
-generated: 2018-11-12T19:51:07.8012107Z
+    - https://juliankamil.github.io/charts/emma-db-redis/emma-db-redis-0.1.1.tgz
+    version: 0.1.1
+generated: 2018-12-04T00:08:43.332141459Z
