@@ -43,7 +43,7 @@ entries:
     appVersion: "1.0"
     created: 2018-12-04T00:08:43.445389934Z
     description: Emma DB
-    digest: 94f814ab9035aec04f2f8f0916dab33619b61680b5a17d8ddfb2462ebf7f45ea
+    digest: 3a9f17088aee83d2910f61b7913ec096478cf88563da87126cf71e4ec7ad30ba
     icon: https://juliankamil.github.io/charts/emma-db-mysql/emma-icons-db-mysql.png
     name: emma-db-mysql
     urls:
