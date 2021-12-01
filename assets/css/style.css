@@ -424,6 +424,9 @@ footer {
     position: absolute;
     right: 50px;
     top: 52px; } }
+a:link {
+  font-weight: inherit; }
+
 @media print, screen and (max-width: 720px) {
   body {
     word-wrap: break-word; }
