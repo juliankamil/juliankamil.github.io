@@ -375,7 +375,7 @@ header ul a strong {
   color: #222; }
 
 section {
-  width: 540px;
+  width: 560px;
   float: right;
   padding-bottom: 50px; }
 
@@ -783,3 +783,23 @@ p .highlighter-rouge {
   padding-right: 4px;
   margin-left: 3px;
   margin-right: 3px; }
+
+/* CONTENT TABLE */
+.content-table div.row {
+  border: none; }
+
+.content-table div.left-column {
+  float: left;
+  width: 52px;
+  border: none;
+  text-align: center; }
+
+.content-table div.right-column {
+  float: left;
+  border: none;
+  max-width: 400px; }
+
+.content-table div.row:after {
+  content: "";
+  display: table;
+  clear: both; }
