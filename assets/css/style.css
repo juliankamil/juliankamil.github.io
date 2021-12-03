@@ -806,3 +806,6 @@ p .highlighter-rouge {
   content: "";
   display: table;
   clear: both; }
+
+p span.present-venture {
+  color: #494949; }
