@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Using OpenAI GPT Models in IBM Watson Assistant | Julian I. Kamil</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Using OpenAI GPT Models in IBM Watson Assistant" />
+<meta name="author" content="juliankamil" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="News and opinions on science, technology, and pop culture" />
+<meta property="og:description" content="News and opinions on science, technology, and pop culture" />
+<link rel="canonical" href="https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html" />
+<meta property="og:url" content="https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html" />
+<meta property="og:site_name" content="Julian I. Kamil" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@juliankamil" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"juliankamil"},"description":"News and opinions on science, technology, and pop culture","headline":"Using OpenAI GPT Models in IBM Watson Assistant","dateModified":"2023-03-15T00:00:00+00:00","datePublished":"2023-03-15T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html"},"url":"https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://juliankamil.github.io/assets/img/Avatar%20-%20Rounded%20-%20BW%20-%20790.jpg"},"name":"juliankamil"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+	<link rel="stylesheet" href="/assets/css/style.css?v=">
+	<link rel="author" href="https://plus.google.com/+JulianKamil/">
+    </head>
+    <body>
+	<script src="https://embed.small.chat/TTGMC9MK3C02P4132G1J.js" async></script>
+	
+	<script>window.twttr = (function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	    if (d.getElementById(id)) return t;
+	    js = d.createElement(s);
+	    js.id = id;
+	    js.src = "https://platform.twitter.com/widgets.js";
+	    fjs.parentNode.insertBefore(js, fjs);
+
+	    t._e = [];
+	    t.ready = function(f) {
+	    t._e.push(f);
+	    };
+
+	    return t;
+	    }(document, "script", "twitter-wjs"));
+	</script>
+
+	<div class="wrapper">
+	    <header>
+		<h1><a href="/" class="site-title">Julian I. Kamil</a></h1>
+
+		
+		<h2>etechcetera</h2>
+		
+
+		
+		<img src="/assets/img/Avatar%20-%20Rounded%20-%20BW%20-%20790.jpg" alt="Logo" height="160" width="160" />
+		
+
+		<div class="site-tag-line">News and opinions on science, technology, and pop culture</div>
+
+		<p class="view">
+		    <a href="/"                   >Home</a><br/>
+		    <a href="/about/me"           >About me</a><br/>
+		    <a href="https://medium.com/@julian.kamil"           target="_blank">Medium</a><br/>
+		    <a href="https://github.com/juliankamil" target="_blank">GitHub</a><br/>
+		    <a href="https://masto.ai/@juliankamil"         target="_blank">Mastodon</a><br/>
+		    <a href="https://twitter.com/juliankamil"          target="_blank">Twitter</a><br/>
+		    <a href="/about/me/on/wechat" >WeChat</a><br/>
+		    <a href="https://juliankamil.blogspot.com/"         target="_blank">Blogspot</a><br/>
+			<a href="https://www.credly.com/users/julian-kamil/badges"           target="_blank">Credly</a><br/>
+		</p>
+	    </header>
+	    <section>
+
+		<h2>Using OpenAI GPT Models in IBM Watson Assistant</h2>
+
+<p>
+    <span class="date-line">March 15, 2023</span>
+    
+    <span class="tag-line">/ Tags: twistech - science - technology - black hole</span>
+    
+</p>
+
+<p>
+    <span>
+	<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Using OpenAI GPT Models in IBM Watson Assistant by @juliankamil #twistech #science #technology #blackhole">Tweet Using OpenAI GPT Models in IBM Watson Assistant</a>
+    </span>
+    <span>
+	<iframe class="facebook-share-button" src="https://www.facebook.com/plugins/share_button.php?href=https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+    </span>
+</p>
+
+
+<p><img src="/assets/img/blog/post-2023-03-15-hero.jpg" alt="" /></p>
+
+<p>While OpenAI GPT models and IBM Watson Assistant provide fundamentally different methods for building AI chatbots, there are ways that we can put them together to build interesting and helpful solutions.</p>
+
+<p>In this article, we’ll discuss both the similarities and differences between the two approaches and the ways that they are complementary and can be combined effectively.</p>
+
+<h2 id="gpt-models-and-watson-assistant">GPT Models and Watson Assistant</h2>
+
+<p>First, the similarities.</p>
+
+<p>Both technologies are using deep-learning AI models for natural language understanding that can be used to build seemingly intelligent chatbots that can converse in natural language.</p>
+
+<p>GPT-4, the current generation of the OpenAI LLMs, has been integrated into Microsoft Bing Chat to provide an alternative to traditional web search, allowing users to converse with it to find information.</p>
+
+<p>Watson Assistant has been implemented in various enterprises to build chatbots that often use private data sources — enterprise databases, document repositories, and APIs — to answer questions.</p>
+
+<p>In both applications, the resulting user experiences are very similar: <em>end users find what they are looking for by conversing in natural language with the chatbots. However, under the covers, they work in completely different ways to deliver that experience.</em></p>
+
+<p>So now, the differences.</p>
+
+<h2 id="an-advanced-and-knowledgeable-autocomplete">An advanced and knowledgeable autocomplete</h2>
+
+<p>A GPT model can be thought of as one that provides a very sophisticated form of autocomplete function. In fact, the core integration endpoint for using GPT models is simply and aptly named <a href="https://platform.openai.com/docs/api-reference/completions"><em>completions</em></a>.</p>
+
+<p>To use the GPT <em>completions</em> endpoint to generate an answer, input some text as a <em>prompt</em>, and it will return a text completion that most likely matches the instructions or context in the prompt. To continue having a “dialog” with the model, input the original prompt and response along with the next question to have the model produce the next answer. And so on…</p>
+
+<p>GPT models can understand these prompts and can generate informative responses because they have been pre-trained with enormous amounts of carefully selected text (including text from BookCorpus, Wikipedia, Reddit, and other sources on the web) and fine-tuned by OpenAI using a technique known as RLHF (Reinforcement Learning from Human Feedback). This is how they appear to be generally <em>intelligent</em> and are able to provide <em>meaningful</em> responses.</p>
+
+<h2 id="a-resolver-of-intents-and-entities">A resolver of intents and entities</h2>
+
+<p>Watson Assistant works very differently from a GPT model.</p>
+
+<p>When a question is input into Watson Assistant’s <a href="https://cloud.ibm.com/apidocs/assistant-v2#message"><em>message</em></a> endpoint, it returns the <em>intents</em> and <em>entities</em> that its language model recognized in the input text. It does not generate any text completions or answers. It will be up to the caller of the endpoint to use the inferred intents and entities appropriately in order to generate correct and meaningful responses. There is no inherent general or domain-specific knowledge in Watson Assistant that can be used to readily form any intelligent or meaningful answers.</p>
+
+<h2 id="key-difference-in-the-developer-journey">Key difference in the developer journey</h2>
+
+<p>Even without any <em>fine-tuning</em>, a GPT model can always produce an answer to every asked question using its “embedded”, pre-training knowledge. These are often very accurate and “real” answers, but at other times they are just as likely made up or <em>hallucinated</em> by the model. Nonetheless, a GPT model can always answer any questions with confidence. A single and simple inference call is all it takes to produce an answer and complete the dialog exchange.</p>
+
+<p>With Watson Assistant, work is not complete with the initial resolution of intents and entities. More work, often involving further interrogation for missing, but needed entities, or very complex queries against sources of truths is required before an answer can be produced. However, once the answer is formulated, it’s more likely to be real, precise, and accurate.</p>
+
+<p>As an upside, with this approach there is no chance for any hallucinations to occur. On the other hand, to the chatbot developer, this model of integration requires a whole lot more effort to complete.</p>
+
+<h2 id="take-the-best-of-both">Take the best of both</h2>
+
+<p>There are several ways to “correct” GPT models misbehaviors and to adapt them better into specific domains.</p>
+
+<p>Adding more context in the initial prompt, which with GPT-4 now can go as high as 32K tokens (about 24K words, or roughly 50 pages of printed text) is one of those methods that could get very expensive, very quickly.</p>
+
+<p>Another well-known method which is cheaper, but a whole lot more complex to implement involves using embeddings of the question and searching a vector database of the domain-specific content to generate a more accurate response with a GPT model.</p>
+
+<p>Ultimately, the best method to adapt a GPT model into a domain would be by fine-tuning it with additional trainings using the domain’s content.</p>
+
+<p>As another alternative, we could combine Watson Assistant and a GPT model to create a question-answering chatbot that can be generally useful and less likely to hallucinate while keeping it simple enough to build.</p>
+
+<p><img src="/assets/img/blog/post-2023-03-15-figure-1.png" alt="" /></p>
+
+<p><span class="caption">Using a GPT model in Watson Assistant</span></p>
+
+<p>This “hybrid” method uses Watson Assistant as a front-end that can resolve the user intents and use that understanding to create a suitable prompt for the GPT model so it can generate a more factual answer. When no intents can be discerned from the query, Watson Assistant can use a more generic prompt to generate the answer. Other, more critical intents can still be handled without involving the GPT model — allowing those questions to be answered precisely and accurately.</p>
+
+<p>With this hybrid approach, the chatbot can now:</p>
+
+<ul>
+  <li>Generate helpful answers to general questions with very little effort using the GPT model,</li>
+  <li>Generate more factual answers to some more important questions through prompt engineering the GPT model, and</li>
+  <li>Generate very precise and accurate answers to those questions considered the most critical by constructing them from the sources of truths.</li>
+</ul>
+
+<p>How nice!</p>
+
+
+<h3>More articles</h3>
+
+<ul class="next-up-list">
+    
+    
+    
+    
+    <li><a href="/twistech/2019/04/12/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">April 12, 2019</span></li>
+    
+    
+    
+    <li><a href="/twistech/2019/03/22/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">March 22, 2019</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/09/28/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">September 28, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/08/31/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">August 31, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/08/17/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">August 17, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/08/10/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">August 10, 2018</span></li>
+    
+    
+    
+    <li><a href="/blog/2018/07/29/getting-closer-to-the-metal-with-kvm.html">Getting closer to the metal with KVM</a> / <span class="source-line">July 29, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/07/27/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">July 27, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/06/08/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">June 8, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/06/01/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">June 1, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/05/25/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">May 25, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/05/18/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">May 18, 2018</span></li>
+    
+    
+    
+    <li><a href="/blog/2018/05/14/the-40-40-20-rule-in-action.html">The 40-40-20 rule in action</a> / <span class="source-line">May 14, 2018</span></li>
+    
+    
+    
+    <li><a href="/blog/2018/04/18/a-ruby-chatbot-for-ibm-watson-assistant.html">A Ruby chatbot for IBM Watson Assistant</a> / <span class="source-line">April 18, 2018</span></li>
+    
+    
+    
+    <li><a href="/twistech/2018/04/09/this-week-in-science-and-technology.html">This week in science and technology</a> / <span class="source-line">April 9, 2018</span></li>
+    
+    
+</ul>
+
+
+<h3>Share your thoughts</h3>
+
+<p><span class="paragraph-title">Using OpenAI GPT Models in IBM Watson Assistant</span> / <span class="source-line">March 15, 2023</span></p>
+
+<div class="form-container">
+    <form id="comment-form" method="POST" action="https://api.staticman.net/v2/entry/juliankamil/juliankamil.github.io/master/comments">
+	<div class="row">
+	    <div class="left-column">
+		<label for="comment-form-message">Comment:</label>
+	    </div>
+	    <div class="right-column">
+		<textarea name="fields[content]" rows="7" id="comment-form-message"></textarea>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <div class="left-column">
+		<label for="comment-form-name">Name:</label>
+	    </div>
+	    <div class="right-column">
+		<input name="fields[name]" type="text" id="comment-form-name"/>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <div class="left-column">
+		<label for="comment-form-email">Email:</label>
+	    </div>
+	    <div class="right-column">
+		<input name="fields[email]" type="email" id="comment-form-email" placeholder="This will not be shown in your post"/>
+	    </div>
+	</div>
+
+	<div class="row">
+	    <input type="hidden" name="options[redirect]"   value="https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html"/>
+	    <input type="hidden" name="options[slug]"       value="using-openai-gpt-models-in-ibm-watson-assistant"/>
+	    <input type="hidden" name="fields[replying_to]" value="" id="comment-parent"/>
+	</div>
+	
+	<div class="row">
+            <input type="submit" id="comment-form-submit" value="Share" />
+	</div>
+    </form>
+</div>
+
+<hr class="comment-separator"/>
+
+
+
+
+
+
+	    </section>
+	    <footer>
+		<p>
+		    <small>
+			Handcrafted with <a href="https://github.com/jekyll/jekyll" target="_blank">Jekyll</a> and <a href="https://staticman.net/" target="_blank">Staticman</a>
+		    </small><br/>
+		    <small>Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></small><br/>
+		    <a href="/feed.xml">
+			<img class="feed-icon" src="/assets/img/rss_512.png" height="24" width="24"/>
+		    </a>
+		</p>
+	    </footer>
+	</div>
+	<script src="/assets/js/scale.fix.js"></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VVK1QHRV7R"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-VVK1QHRV7R');
+	</script>
+	
+    </body>
+</html>
