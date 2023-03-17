@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://juliankamil.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://juliankamil.github.io/" rel="alternate" type="text/html" /><updated>2023-03-16T20:22:18+00:00</updated><id>https://juliankamil.github.io/</id><title type="html">Julian I. Kamil</title><subtitle>News and opinions on science, technology, and pop culture</subtitle><author><name>juliankamil</name></author><entry><title type="html">Using OpenAI GPT Models in IBM Watson Assistant</title><link href="https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html" rel="alternate" type="text/html" title="Using OpenAI GPT Models in IBM Watson Assistant" /><published>2023-03-15T00:00:00+00:00</published><updated>2023-03-15T00:00:00+00:00</updated><id>https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant</id><content type="html" xml:base="https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/post-2023-03-15-hero.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://juliankamil.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://juliankamil.github.io/" rel="alternate" type="text/html" /><updated>2023-03-17T18:52:26+00:00</updated><id>https://juliankamil.github.io/</id><title type="html">Julian I. Kamil</title><subtitle>News and opinions on science, technology, and pop culture</subtitle><author><name>juliankamil</name></author><entry><title type="html">Using OpenAI GPT Models in IBM Watson Assistant</title><link href="https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html" rel="alternate" type="text/html" title="Using OpenAI GPT Models in IBM Watson Assistant" /><published>2023-03-15T00:00:00+00:00</published><updated>2023-03-15T00:00:00+00:00</updated><id>https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant</id><content type="html" xml:base="https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/post-2023-03-15-hero.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;While OpenAI GPT models and IBM Watson Assistant provide fundamentally different methods for building AI chatbots, there are ways that we can put them together to build interesting and helpful solutions.&lt;/p&gt;
 
@@ -34,7 +34,13 @@
 
 &lt;h2 id=&quot;key-difference-in-the-developer-journey&quot;&gt;Key difference in the developer journey&lt;/h2&gt;
 
-&lt;p&gt;Even without any &lt;em&gt;fine-tuning&lt;/em&gt;, a GPT model can always produce an answer to every asked question using its “embedded”, pre-training knowledge. These are often very accurate and “real” answers, but at other times they are just as likely made up or &lt;em&gt;hallucinated&lt;/em&gt; by the model. Nonetheless, a GPT model can always answer any questions with confidence. A single and simple inference call is all it takes to produce an answer and complete the dialog exchange.&lt;/p&gt;
+&lt;p&gt;Even without any &lt;em&gt;fine-tuning&lt;/em&gt;, a GPT model can always produce an answer to every asked question using its “embedded”, pre-training knowledge. These are often very accurate and “real” answers, but at other times they are just as likely made up or &lt;em&gt;hallucinated&lt;/em&gt; by the model.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The specific engineering of ChatGPT has made it quite compelling. But ultimately (at least until it can use outside tools) ChatGPT is “merely” pulling out some “coherent thread of text” from the “statistics of conventional wisdom” that it’s accumulated. — Stephen Wolfram, &lt;a href=&quot;https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/&quot;&gt;What Is ChatGPT Doing … and Why Does It Work?&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Nonetheless, a GPT model can always answer any questions with confidence. A single and simple inference call is all it takes to produce an answer and complete the dialog exchange.&lt;/p&gt;
 
 &lt;p&gt;With Watson Assistant, work is not complete with the initial resolution of intents and entities. More work, often involving further interrogation for missing, but needed entities, or very complex queries against sources of truths is required before an answer can be produced. However, once the answer is formulated, it’s more likely to be real, precise, and accurate.&lt;/p&gt;
 
@@ -57,6 +63,10 @@
 &lt;p&gt;&lt;span class=&quot;caption&quot;&gt;Using a GPT model in Watson Assistant&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;This “hybrid” method uses Watson Assistant as a front-end that can resolve the user intents and use that understanding to create a suitable prompt for the GPT model so it can generate a more factual answer. When no intents can be discerned from the query, Watson Assistant can use a more generic prompt to generate the answer. Other, more critical intents can still be handled without involving the GPT model — allowing those questions to be answered precisely and accurately.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Note: Interestingly, the newly announced Microsoft 365 Copilot System uses almost exactly this approach to integrate GPT-powered AI features into their Office 365 suite of products. See: &lt;a href=&quot;https://youtu.be/8_lXSmlwk1s&quot;&gt;Explaining the Microsoft 365 Copilot System&lt;/a&gt; — YouTube&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;With this hybrid approach, the chatbot can now:&lt;/p&gt;
 
