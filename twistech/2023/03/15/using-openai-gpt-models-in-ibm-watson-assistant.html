@@ -121,11 +121,19 @@
 
 <p>To use the GPT <em>completions</em> endpoint to generate an answer, input some text as a <em>prompt</em>, and it will return a text completion that most likely matches the instructions or context in the prompt. To continue having a “dialog” with the model, input the original prompt and response along with the next question to have the model produce the next answer. And so on…</p>
 
+<p><img src="/assets/img/blog/post-2023-03-15-figure-2.png" alt="" /></p>
+
+<p><span class="caption">Using the completions endpoint to generate answers</span></p>
+
 <p>GPT models can understand these prompts and can generate informative responses because they have been pre-trained with enormous amounts of carefully selected text (including text from BookCorpus, Wikipedia, Reddit, and other sources on the web) and fine-tuned by OpenAI using a technique known as RLHF (Reinforcement Learning from Human Feedback). This is how they appear to be generally <em>intelligent</em> and are able to provide <em>meaningful</em> responses.</p>
 
 <h2 id="a-resolver-of-intents-and-entities">A resolver of intents and entities</h2>
 
 <p>Watson Assistant works very differently from a GPT model.</p>
+
+<p><img src="/assets/img/blog/post-2023-03-15-figure-2.png" alt="" /></p>
+
+<p><span class="caption">Using the message endpoint and a query to a facts source to generate answers</span></p>
 
 <p>When a question is input into Watson Assistant’s <a href="https://cloud.ibm.com/apidocs/assistant-v2#message"><em>message</em></a> endpoint, it returns the <em>intents</em> and <em>entities</em> that its language model recognized in the input text. It does not generate any text completions or answers. It will be up to the caller of the endpoint to use the inferred intents and entities appropriately in order to generate correct and meaningful responses. There is no inherent general or domain-specific knowledge in Watson Assistant that can be used to readily form any intelligent or meaningful answers.</p>
 
@@ -162,7 +170,7 @@
 <p>This “hybrid” method uses Watson Assistant as a front-end that can resolve the user intents and use that understanding to create a suitable prompt for the GPT model so it can generate a more factual answer. When no intents can be discerned from the query, Watson Assistant can use a more generic prompt to generate the answer. Other, more critical intents can still be handled without involving the GPT model — allowing those questions to be answered precisely and accurately.</p>
 
 <blockquote>
-  <p>Note: Interestingly, the newly announced Microsoft 365 Copilot System uses almost exactly this approach to integrate GPT-powered AI features into their Office 365 suite of products. See: <a href="https://youtu.be/8_lXSmlwk1s">Explaining the Microsoft 365 Copilot System</a> — YouTube</p>
+  <p>Note: Interestingly, the newly announced Microsoft 365 Copilot System uses almost exactly this approach (termed “grounding”) to integrate GPT-powered AI features into their Office 365 suite of products. See: <a href="https://youtu.be/8_lXSmlwk1s">Explaining the Microsoft 365 Copilot System</a> — YouTube</p>
 </blockquote>
 
 <p>With this hybrid approach, the chatbot can now:</p>

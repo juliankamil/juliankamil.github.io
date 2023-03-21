@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://juliankamil.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://juliankamil.github.io/" rel="alternate" type="text/html" /><updated>2023-03-17T18:52:26+00:00</updated><id>https://juliankamil.github.io/</id><title type="html">Julian I. Kamil</title><subtitle>News and opinions on science, technology, and pop culture</subtitle><author><name>juliankamil</name></author><entry><title type="html">Using OpenAI GPT Models in IBM Watson Assistant</title><link href="https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html" rel="alternate" type="text/html" title="Using OpenAI GPT Models in IBM Watson Assistant" /><published>2023-03-15T00:00:00+00:00</published><updated>2023-03-15T00:00:00+00:00</updated><id>https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant</id><content type="html" xml:base="https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/post-2023-03-15-hero.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://juliankamil.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://juliankamil.github.io/" rel="alternate" type="text/html" /><updated>2023-03-21T13:53:15+00:00</updated><id>https://juliankamil.github.io/</id><title type="html">Julian I. Kamil</title><subtitle>News and opinions on science, technology, and pop culture</subtitle><author><name>juliankamil</name></author><entry><title type="html">Using OpenAI GPT Models in IBM Watson Assistant</title><link href="https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html" rel="alternate" type="text/html" title="Using OpenAI GPT Models in IBM Watson Assistant" /><published>2023-03-15T00:00:00+00:00</published><updated>2023-03-15T00:00:00+00:00</updated><id>https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant</id><content type="html" xml:base="https://juliankamil.github.io/twistech/2023/03/15/using-openai-gpt-models-in-ibm-watson-assistant.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/post-2023-03-15-hero.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;While OpenAI GPT models and IBM Watson Assistant provide fundamentally different methods for building AI chatbots, there are ways that we can put them together to build interesting and helpful solutions.&lt;/p&gt;
 
@@ -24,11 +24,19 @@
 
 &lt;p&gt;To use the GPT &lt;em&gt;completions&lt;/em&gt; endpoint to generate an answer, input some text as a &lt;em&gt;prompt&lt;/em&gt;, and it will return a text completion that most likely matches the instructions or context in the prompt. To continue having a “dialog” with the model, input the original prompt and response along with the next question to have the model produce the next answer. And so on…&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/post-2023-03-15-figure-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;caption&quot;&gt;Using the completions endpoint to generate answers&lt;/span&gt;&lt;/p&gt;
+
 &lt;p&gt;GPT models can understand these prompts and can generate informative responses because they have been pre-trained with enormous amounts of carefully selected text (including text from BookCorpus, Wikipedia, Reddit, and other sources on the web) and fine-tuned by OpenAI using a technique known as RLHF (Reinforcement Learning from Human Feedback). This is how they appear to be generally &lt;em&gt;intelligent&lt;/em&gt; and are able to provide &lt;em&gt;meaningful&lt;/em&gt; responses.&lt;/p&gt;
 
 &lt;h2 id=&quot;a-resolver-of-intents-and-entities&quot;&gt;A resolver of intents and entities&lt;/h2&gt;
 
 &lt;p&gt;Watson Assistant works very differently from a GPT model.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/post-2023-03-15-figure-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;caption&quot;&gt;Using the message endpoint and a query to a facts source to generate answers&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;When a question is input into Watson Assistant’s &lt;a href=&quot;https://cloud.ibm.com/apidocs/assistant-v2#message&quot;&gt;&lt;em&gt;message&lt;/em&gt;&lt;/a&gt; endpoint, it returns the &lt;em&gt;intents&lt;/em&gt; and &lt;em&gt;entities&lt;/em&gt; that its language model recognized in the input text. It does not generate any text completions or answers. It will be up to the caller of the endpoint to use the inferred intents and entities appropriately in order to generate correct and meaningful responses. There is no inherent general or domain-specific knowledge in Watson Assistant that can be used to readily form any intelligent or meaningful answers.&lt;/p&gt;
 
@@ -65,7 +73,7 @@
 &lt;p&gt;This “hybrid” method uses Watson Assistant as a front-end that can resolve the user intents and use that understanding to create a suitable prompt for the GPT model so it can generate a more factual answer. When no intents can be discerned from the query, Watson Assistant can use a more generic prompt to generate the answer. Other, more critical intents can still be handled without involving the GPT model — allowing those questions to be answered precisely and accurately.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Note: Interestingly, the newly announced Microsoft 365 Copilot System uses almost exactly this approach to integrate GPT-powered AI features into their Office 365 suite of products. See: &lt;a href=&quot;https://youtu.be/8_lXSmlwk1s&quot;&gt;Explaining the Microsoft 365 Copilot System&lt;/a&gt; — YouTube&lt;/p&gt;
+  &lt;p&gt;Note: Interestingly, the newly announced Microsoft 365 Copilot System uses almost exactly this approach (termed “grounding”) to integrate GPT-powered AI features into their Office 365 suite of products. See: &lt;a href=&quot;https://youtu.be/8_lXSmlwk1s&quot;&gt;Explaining the Microsoft 365 Copilot System&lt;/a&gt; — YouTube&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;With this hybrid approach, the chatbot can now:&lt;/p&gt;
