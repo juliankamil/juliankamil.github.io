@@ -498,6 +498,9 @@ span.line-title {
 pre {
   font-size: 0.85em; }
 
+img.avatar {
+  border-radius: 50%; }
+
 /* CONTACT FORM */
 /*
 form table.contact-form {
